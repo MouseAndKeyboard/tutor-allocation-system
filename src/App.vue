@@ -3,6 +3,7 @@ import { Scheduler } from "@progress/kendo-vue-scheduler";
 import "@progress/kendo-theme-default/dist/all.css";
 
 import InputParameters from "./components/InputParameters.vue";
+import Schedule from "./components/Schedule.vue";
 </script>
 
 <template>
@@ -10,12 +11,7 @@ import InputParameters from "./components/InputParameters.vue";
     <h1 className="text-4xl font-bold">Tutor Allocation System</h1>
     <InputParameters />
     <h2 className="text-2xl font-bold">Schedule</h2>
-    <!-- <Scheduler
-      :data-items="sampleData"
-      :default-date="displayDate"
-      :view="view"
-      :views="views"
-    ></Scheduler> -->
+    <Schedule/>
     <h2 className="text-2xl font-bold">Enter Assessment Dates</h2>
     <form>
       <label>
