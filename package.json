@@ -7,6 +7,18 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "@progress/kendo-date-math": "^1.5.8",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-theme-default": "^5.8.1",
+    "@progress/kendo-vue-buttons": "^3.6.1",
+    "@progress/kendo-vue-dateinputs": "^3.6.1",
+    "@progress/kendo-vue-dialogs": "^3.6.1",
+    "@progress/kendo-vue-dropdowns": "^3.6.1",
+    "@progress/kendo-vue-form": "^3.6.1",
+    "@progress/kendo-vue-inputs": "^3.6.1",
+    "@progress/kendo-vue-intl": "^3.6.1",
+    "@progress/kendo-vue-popup": "^3.6.1",
+    "@progress/kendo-vue-scheduler": "^3.6.1",
     "@vuepic/vue-datepicker": "^3.4.8",
     "vue": "^3.2.38"
   },

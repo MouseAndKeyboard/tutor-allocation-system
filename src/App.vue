@@ -1,8 +1,18 @@
-<script setup></script>
+<script setup>
+import { Scheduler } from "@progress/kendo-vue-scheduler";
+import "@progress/kendo-theme-default/dist/all.css";
+</script>
 
 <template>
   <main>
     <h1 className="text-4xl font-bold">Tutor Allocation System</h1>
+    <h2 className="text-2xl font-bold">Schedule</h2>
+    <!-- <Scheduler
+      :data-items="sampleData"
+      :default-date="displayDate"
+      :view="view"
+      :views="views"
+    ></Scheduler> -->
     <h2 className="text-2xl font-bold">Enter Assessment Dates</h2>
     <form>
       <label>
