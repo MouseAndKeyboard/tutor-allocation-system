@@ -17,9 +17,9 @@
 import { Scheduler } from "@progress/kendo-vue-scheduler";
 import "@progress/kendo-theme-default/dist/all.css";
 
-import AssessmentInput from "./components/AssessmentInput.vue";
-import InputParameters from "./components/InputParameters.vue";
-import Schedule from "./components/Schedule.vue";
+import AssessmentInput from "../components/AssessmentInput.vue";
+import InputParameters from "../components/InputParameters.vue";
+import Schedule from "../components/Schedule.vue";
 </script>
 
 <template>
