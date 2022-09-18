@@ -1,4 +1,61 @@
-<script></script>
+<script>
+import optimal_allocations from "../utils/otpimal_allocations";
+const results = optimal_allocations(
+  4,
+  [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    true,
+  ],
+  0.4,
+  0.6,
+  5,
+  120
+);
+console.log(results);
+
+export default {
+  data: () => ({
+    results: results,
+  }),
+  methods: {
+    optimal_allocations,
+    simulate() {
+      this.result = optimal_allocations(
+        4,
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+        ],
+        0.4,
+        0.6,
+        5,
+        120
+      );
+      console.log(results);
+    },
+  },
+};
+</script>
 
 <template>
   <div>
@@ -16,9 +73,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="num in Array.from({ length: 12 }, (_, i) => i + 1)">
-          <td>
-            {{ num }}
+        <tr v-for="row in results">
+          <td v-for="val in row">
+            {{ val }}
           </td>
         </tr>
       </tbody>
