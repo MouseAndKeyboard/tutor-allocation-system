@@ -1,13 +1,11 @@
 <template>
   <div class="my-5 w-screen">
     <h2 class="font-bold mb-4 text-2xl">Results</h2>
-    <table
-      className="border-collapse border border-slate-400 m-auto text-center w-5/6"
-    >
+    <table className="border-collapse m-auto text-center w-5/6">
       <thead>
         <tr>
           <th
-            class="border border-gray-400"
+            class="border-y-2 border-gray-400"
             v-for="header in [
               'Week',
               'Assignment',
@@ -24,8 +22,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in results">
-          <td class="border border-slate-400" v-for="val in row">
+        <tr v-for="row in results" class="even:bg-gray">
+          <td class="border-y-2 border-slate-400" v-for="val in row">
             {{ val }}
           </td>
         </tr>
@@ -70,9 +68,16 @@ export default {
   }),
   methods: {
     optimal_allocations,
-    simulate() {
+    simulate(
+      num_labs,
+      assignment_schedule,
+      baseline_join_rate,
+      assignment_join_rate,
+      tutor_help_rate,
+      queuelength
+    ) {
       this.result = optimal_allocations(
-        4,
+        num_labs,
         [
           false,
           false,
@@ -87,10 +92,10 @@ export default {
           false,
           true,
         ],
-        0.4,
-        0.6,
-        5,
-        120
+        baseline_join_rate,
+        assignment_join_rate,
+        tutor_help_rate,
+        queuelength
       );
       console.log(results);
     },

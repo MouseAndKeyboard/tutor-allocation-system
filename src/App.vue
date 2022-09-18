@@ -1,28 +1,3 @@
-<script>
-import sim from "/src/utils/otpimal_allocations.js";
-
-import "@progress/kendo-theme-default/dist/all.css";
-
-import InputParameters from "./components/InputParameters.vue";
-import ResultsTable from "./components/ResultsTable.vue";
-
-export default {
-  methods: {
-    simulate() {
-      let vals = [];
-      for (let index = 0; index < 10000; index++) {
-        vals.push(sim(1, 1 / 5, 5, 120));
-      }
-      console.log(vals);
-    },
-  },
-  components: {
-    InputParameters,
-    ResultsTable,
-  },
-};
-</script>
-
 <template>
   <main>
     <div>
@@ -37,44 +12,71 @@ export default {
         <div className="grid grid-cols-2 mx-4">
           <div>
             <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
-            <InputParameters />
+            <InputParameters ref="inputs" />
           </div>
-          <form>
-            <h2 className="text-2xl font-bold mb-1">Enter Assessment Dates</h2>
-            <div class="flex justify-start pb-2">
-              <label className="w-[9.5rem]"> Assignment Name:</label>
-              <input
-                type="text"
-                name="name"
-                className="ml-2 rounded-md w-[14.5rem]"
-              />
-            </div>
-
-            <div class="flex justify-start pb-1">
-              <label class="w-40">Start Time:</label>
-              <Datepicker v-model="date" :month-year-component="monthYear" />
-            </div>
-
-            <div class="flex justify-start pb-1">
-              <label class="w-40"> End Time: </label>
-              <Datepicker v-model="date" :month-year-component="monthYear" />
-            </div>
-          </form>
-
-          <ResultsTable />
+          <AssessmentInput />
+          <ResultsTable ref="results" />
         </div>
         <div>
           <button
-            v-on:click="simulate"
+            @click="simulate"
             className="bg-blue1 outline-1 w-30 p-2 italics ml-5"
           >
             Generate results
           </button>
+          <button @click="test">test</button>
         </div>
       </div>
     </div>
   </main>
 </template>
+
+<script>
+import sim from "/src/utils/otpimal_allocations.js";
+
+import "@progress/kendo-theme-default/dist/all.css";
+
+import InputParameters from "./components/InputParameters.vue";
+import ResultsTable from "./components/ResultsTable.vue";
+import AssessmentInput from "./components/AssessmentInput.vue";
+
+export default {
+  methods: {
+    simulate() {
+      let questionsPerMinuteNoAssessments =
+        this.$refs.inputs.questionsPerMinuteNoAssessments;
+      let questionsPerMinuteAssessments =
+        this.$refs.inputs.questionsPerMinuteAssessments;
+      let labsPerWeek = this.$refs.inputs.labsPerWeek;
+      let labDuration = this.$refs.inputs.labDuration;
+      let delayCost = this.$refs.inputs.delayCost;
+      let tutorSalary = this.$refs.inputs.tutorSalary;
+      let tutorhelptime = this.$refs.inputs.avgTutorHelpTime;
+      this.$refs.results.simulate(
+        labsPerWeek,
+        [true, false],
+        questionsPerMinuteNoAssessments,
+        questionsPerMinuteAssessments,
+        tutorhelptime,
+        labDuration
+      );
+      console.log("hey", tutorhelptime);
+      // let vals = [];
+      // let test = [];
+      // console.log(vals);
+      // test.push(document.getElementById("quesRate1").value);
+      // test.push(document.getElementById("quesRate2").value);
+      // test.push(document.getElementById("avgTutorHelpTime").value);
+      // console.log(test);
+    },
+  },
+  components: {
+    InputParameters,
+    ResultsTable,
+    AssessmentInput,
+  },
+};
+</script>
 
 <style scoped>
 input {

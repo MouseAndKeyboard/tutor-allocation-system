@@ -1,21 +1,3 @@
-<script>
-import { reactive } from "vue";
-
-export default {
-  data() {
-    return {
-      avgTutorHelpTime: 0,
-      delayCost: 0,
-      labDuration: 120,
-      labsPerWeek: 0,
-      questionsPerMinuteNoAssessments: 0,
-      questionsPerMinuteAssessments: 0,
-      tutorSalary: 50,
-    };
-  },
-};
-</script>
-
 <template>
   <form>
     <div class="flex justify-start pb-1">
@@ -44,6 +26,7 @@ export default {
     <div class="flex justify-start pb-1">
       <label class="w-80">Average tutor help time (mins):</label>
       <input
+        id="avgTutorHelpTime"
         type="number"
         min="0"
         step=".01"
@@ -94,6 +77,24 @@ export default {
     </div>
   </form>
 </template>
+
+<script>
+import { reactive } from "vue";
+
+export default {
+  data() {
+    return {
+      avgTutorHelpTime: 0,
+      delayCost: 0,
+      labDuration: 120,
+      labsPerWeek: 0,
+      questionsPerMinuteNoAssessments: 0,
+      questionsPerMinuteAssessments: 0,
+      tutorSalary: 50,
+    };
+  },
+};
+</script>
 
 <style scoped>
 input {
