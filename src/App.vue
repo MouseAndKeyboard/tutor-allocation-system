@@ -19,12 +19,11 @@
         </div>
         <div>
           <button
-            @click="simulate"
+            @click="getResults"
             className="bg-blue1 outline-1 w-30 p-2 italics ml-5"
           >
             Generate results
           </button>
-          <button @click="test">test</button>
         </div>
       </div>
     </div>
@@ -42,7 +41,7 @@ import AssessmentInput from "./components/AssessmentInput.vue";
 
 export default {
   methods: {
-    simulate() {
+    getResults() {
       let questionsPerMinuteNoAssessments =
         this.$refs.inputs.questionsPerMinuteNoAssessments;
       let questionsPerMinuteAssessments =
@@ -53,21 +52,29 @@ export default {
       let tutorSalary = this.$refs.inputs.tutorSalary;
       let tutorhelptime = this.$refs.inputs.avgTutorHelpTime;
       this.$refs.results.simulate(
+        tutorSalary,
+        delayCost,
         labsPerWeek,
-        [true, false],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+        ],
         questionsPerMinuteNoAssessments,
         questionsPerMinuteAssessments,
         tutorhelptime,
         labDuration
       );
       console.log("hey", tutorhelptime);
-      // let vals = [];
-      // let test = [];
-      // console.log(vals);
-      // test.push(document.getElementById("quesRate1").value);
-      // test.push(document.getElementById("quesRate2").value);
-      // test.push(document.getElementById("avgTutorHelpTime").value);
-      // console.log(test);
     },
   },
   components: {
