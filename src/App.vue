@@ -43,12 +43,12 @@
             </div>
 
             <div class="flex justify-start pb-1">
-              <label className="w-[35]">Start Time:</label> 
+              <label className="">Start Time:</label> 
               <Datepicker v-model="date" :month-year-component="monthYear" className="rounded-md" />
             </div>
 
             <div class="flex justify-start pb-1">
-              <label className="w-[35]"> End Time: </label>
+              <label className=""> End Time: </label>
               <Datepicker v-model="date" :month-year-component="monthYear" className="rounded-md" />
             </div>
 
@@ -56,14 +56,89 @@
 
           <div>
             <table>
-              <tr>
-              <th>Week</th>
-              <th>Number of Tutors</th>
-              <th>Average Wait Time</th>
-              <th>Max Wait Time</th>
-              </tr>
-            </table>
-          </div>
+              <thead>
+  <tr>
+    <th>Week</th>
+    <th>Number of Tutors</th>
+    <th>Max. Wait Time</th>
+    <th>Av. Wait Time</th>
+    <th>Money Spent</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+</div>
 
           </div>
           <button v-on:click="simulate" className="flex items-end bg-slate-100 p-5 rounded-md my-5">Crunch the numbers</button>
