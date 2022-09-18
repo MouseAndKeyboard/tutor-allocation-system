@@ -4,6 +4,7 @@ import sim from "/src/utils/otpimal_allocations.js";
 import "@progress/kendo-theme-default/dist/all.css";
 
 import InputParameters from "./components/InputParameters.vue";
+import ResultsTable from "./components/ResultsTable.vue";
 
 export default {
   methods: {
@@ -17,6 +18,7 @@ export default {
   },
   components: {
     InputParameters,
+    ResultsTable,
   },
 };
 </script>
@@ -59,91 +61,7 @@ export default {
             </div>
           </form>
 
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Week</th>
-                  <th>Number of Tutors</th>
-                  <th>Max. Wait Time</th>
-                  <th>Av. Wait Time</th>
-                  <th>Money Spent</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <ResultsTable />
         </div>
         <div>
           <button
