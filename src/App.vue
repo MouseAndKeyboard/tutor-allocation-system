@@ -12,13 +12,13 @@ import Schedule from "./components/Schedule.vue";
     <h1 className="text-4xl font-bold">Tutor Allocation System</h1>
     <InputParameters />
     <h2 className="text-2xl font-bold">Schedule</h2>
-    <Schedule/>
     <h2 className="text-2xl font-bold">Enter Assessment Dates</h2>
-    <form>
-      <label>
-        Name:<br />
+    <form className="py-3">
+      <label className="inline-flex items-baseline mx-3 space-x-3 h-">
+        Assignment Name:<br />
         <input type="text" name="name" /><br />
       </label>
+      <div className="py-1 flex mx-3 space-x-3">
       <label>
         Start Time:
         <Datepicker v-model="date" :month-year-component="monthYear" />
@@ -27,7 +27,9 @@ import Schedule from "./components/Schedule.vue";
         End Time:
         <Datepicker v-model="date" :month-year-component="monthYear" />
       </label>
+      </div>
     </form>
+    <Schedule/>
   </div>
   </main>
 </template>

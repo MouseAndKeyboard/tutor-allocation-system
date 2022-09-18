@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <h2 className="text-2xl font-bold">Parameters</h2>
+  <h2 className="space-x-0 text-2xl font-bold">Parameters</h2>
   <form className="grid grid-cols-2">
     <label>Question rate/no assessments (per min):</label>
     <input
