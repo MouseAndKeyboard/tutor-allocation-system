@@ -21,6 +21,7 @@ export default {
     <div class="flex justify-start pb-1">
       <label class="w-80">Question rate/no assessments (per min):</label>
       <input
+        id="quesRate1"
         type="number"
         min="0"
         step=".01"
@@ -32,6 +33,7 @@ export default {
     <div class="flex justify-start pb-1">
       <label class="w-80">Question rate/assessments (per min):</label>
       <input
+        id="quesRate2"
         type="number"
         min="0"
         step=".01"
@@ -52,19 +54,43 @@ export default {
 
     <div class="flex justify-start pb-1">
       <label class="w-80">Lab duration (mins):</label>
-      <input type="number" min="0" v-model="labDuration" class="rounded-md" />
+      <input
+        id="labDuration"
+        type="number"
+        min="0"
+        v-model="labDuration"
+        class="rounded-md"
+      />
     </div>
     <div class="flex justify-start pb-1">
       <label class="w-80">Labs per week:</label>
-      <input type="number" min="0" v-model="labsPerWeek" class="rounded-md" />
+      <input
+        id="labsPerWeek"
+        type="number"
+        min="0"
+        v-model="labsPerWeek"
+        class="rounded-md"
+      />
     </div>
     <div class="flex justify-start pb-1">
       <label class="w-80">Tutor salary (per hour):</label>
-      <input type="number" min="0" v-model="tutorSalary" class="rounded-md" />
+      <input
+        id="tutorSalary"
+        type="number"
+        min="0"
+        v-model="tutorSalary"
+        class="rounded-md"
+      />
     </div>
     <div class="flex justify-start pb-1">
       <label class="w-80">Delay Cost (per min):</label>
-      <input type="number" min="0" v-model="delayCost" class="rounded-md" />
+      <input
+        id="delayCost"
+        type="number"
+        min="0"
+        v-model="delayCost"
+        class="rounded-md"
+      />
     </div>
   </form>
 </template>

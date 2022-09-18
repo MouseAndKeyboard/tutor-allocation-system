@@ -59,22 +59,28 @@ export default {
 
 <template>
   <div>
-    <table>
+    <table className="border-collapse border border-slate-400">
       <thead>
         <tr>
-          <th>Week</th>
-          <th>Assignment</th>
-          <th>No. of Tutors</th>
-          <th>No. of Labs</th>
-          <th>Total Wait Time</th>
-          <th>Total Wages Cost</th>
-          <th>Total Delay Cost</th>
-          <th>Total Overall Cost</th>
+          <th
+            class="border border-gray-400"
+            v-for="header in [
+              'Assignment',
+              'No. of Tutors',
+              'No. of Labs',
+              'Total Wait Time',
+              'Total Wages Cost',
+              'Total Delay Cost',
+              'Total Overall Cost',
+            ]"
+          >
+            {{ header }}
+          </th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="row in results">
-          <td v-for="val in row">
+          <td class="border border-slate-400" v-for="val in row">
             {{ val }}
           </td>
         </tr>
