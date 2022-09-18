@@ -16,26 +16,43 @@ export default {
 </script>
 
 <template>
-  <h2 className="text-2xl font-bold">Parameters</h2>
-  <form className="grid grid-cols-2">
-    <label>Question rate/no assessments (per min):</label>
-    <input
-      type="number"
-      min="0"
-      step=".01"
-      v-model="questionsPerMinuteNoAssessments"
-    />
-    <label>Question rate/assessments (per min):</label>
-    <input
-      type="number"
-      min="0"
-      step=".01"
-      v-model="questionsPerMinuteAssessments"
-    />
-    <label>Average tutor help time (mins):</label>
-    <input type="number" min="0" step=".01" v-model="avgTutorHelpTime" />
-    <label>Lab duration (mins):</label>
-    <input type="number" min="0" v-model="labDuration" />
+  <form>
+    <div class="flex justify-start pb-1">
+      <label class="w-80">Question rate/no assessments (per min):</label>
+      <input
+        type="number"
+        min="0"
+        step=".01"
+        v-model="questionsPerMinuteNoAssessments"
+        class="rounded-md"
+      />
+    </div>
+
+    <div class="flex justify-start pb-1">
+      <label class="w-80">Question rate/assessments (per min):</label>
+      <input
+        type="number"
+        min="0"
+        step=".01"
+        v-model="questionsPerMinuteAssessments"
+        class="rounded-md"
+      />
+    </div>
+    <div class="flex justify-start pb-1">
+      <label class="w-80">Average tutor help time (mins):</label>
+      <input
+        type="number"
+        min="0"
+        step=".01"
+        v-model="avgTutorHelpTime"
+        class="rounded-md"
+      />
+    </div>
+
+    <div class="flex justify-start pb-1">
+      <label class="w-80">Lab duration (mins):</label>
+      <input type="number" min="0" v-model="labDuration" class="rounded-md" />
+    </div>
     <label>Labs per week:</label>
     <input type="number" min="0" v-model="labsPerWeek" />
     <label>Tutor salary (per hour):</label>
