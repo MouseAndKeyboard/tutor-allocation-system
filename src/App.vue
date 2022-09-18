@@ -41,7 +41,11 @@ export default {
             <h2 className="text-2xl font-bold mb-1">Enter Assessment Dates</h2>
             <div class="flex justify-start pb-2">
               <label className="w-[9.5rem]"> Assignment Name:</label>
-              <input type="text" name="name" className="ml-2 rounded-md w-60" />
+              <input
+                type="text"
+                name="name"
+                className="ml-2 rounded-md w-[14.5rem]"
+              />
             </div>
 
             <div class="flex justify-start pb-1">
