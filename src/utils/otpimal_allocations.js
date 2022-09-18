@@ -1,4 +1,4 @@
-const optimal_allocations = (num_labs, assignment_schedule, baseline_join_rate, assignment_join_rate, tutor_service_time, queuelength) => {
+const optimal_allocations = (tutor_hourly_rate, delay_cost, num_labs, assignment_schedule, baseline_join_rate, assignment_join_rate, tutor_service_time, queuelength) => {
     /**
      *  @param {float} num_labs number of labs per week 
      *  @param {list} assignment_schedule: list of boolean values, if true then that week has an assignment deadline
@@ -16,8 +16,8 @@ const optimal_allocations = (num_labs, assignment_schedule, baseline_join_rate, 
         all_possibilities.push([tutors, result]);
     }
 
-    const cost_per_min_waited = 0.1; // 10 cents per minute
-    const cost_per_tutor_per_min = 50/60; // $50 per hour
+    const cost_per_min_waited = delay_cost;
+    const cost_per_tutor_per_min = tutor_hourly_rate/60;
 
     // for a non-assignment week, how many tutors should we allocate?
     
