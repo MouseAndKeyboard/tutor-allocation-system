@@ -8,6 +8,7 @@ import Schedule from "./components/Schedule.vue";
 
 <template>
   <main>
+    <div className="bg-[url('../assets/CFC_Hackathon.png')] w-screen">
     <h1 className="text-4xl font-bold">Tutor Allocation System</h1>
     <InputParameters />
     <h2 className="text-2xl font-bold">Schedule</h2>
@@ -27,6 +28,7 @@ import Schedule from "./components/Schedule.vue";
         <Datepicker v-model="date" :month-year-component="monthYear" />
       </label>
     </form>
+  </div>
   </main>
 </template>
 
