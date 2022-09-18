@@ -1,4 +1,19 @@
-<script setup></script>
+<script>
+  import sim from '/src/utils/otpimal_allocations.js';
+
+  export default {
+    methods: {
+      simulate() {
+        let vals = [];
+        for (let index = 0; index < 10000; index++) {
+          vals.push(sim(1, 1/5, 5, 120)); 
+        }
+        console.log(vals);
+      }
+    },
+  }
+
+</script>
 
 <template>
   <main>
@@ -18,6 +33,7 @@
         <Datepicker v-model="date" :month-year-component="monthYear" />
       </label>
     </form>
+    <button v-on:click="simulate">Crunch the numbers</button>
   </main>
 </template>
 
