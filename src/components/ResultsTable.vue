@@ -21,7 +21,10 @@ const results = optimal_allocations(
   5,
   120
 );
-console.log(results);
+for (const row of results) {
+  row[4] = row[4].toFixed(0);
+  row[6] = row[6].toFixed(2);
+}
 
 export default {
   data: () => ({
@@ -59,12 +62,13 @@ export default {
 
 <template>
   <div>
-    <table className="border-collapse border border-slate-400">
+    <table className="border-collapse border border-slate-400 text-center">
       <thead>
         <tr>
           <th
             class="border border-gray-400"
             v-for="header in [
+              'Week',
               'Assignment',
               'No. of Tutors',
               'No. of Labs',
