@@ -16,9 +16,7 @@
       }
     },
     components:{
-      Scheduler,
       InputParameters,
-      Schedule
     }
   }
 
@@ -26,22 +24,22 @@
 
 <template>
   <main>
-    <div style="font-family: 'Architects Daughter', cursive;">
-    <div className="bg-[url('../assets/CFC_Hackathon.png')]">
-      <div className="ml-5">
-        <div className="text-center">
-          <h1 className="justify-self-center text-4xl font-bold py-3">Tutor Allocation System</h1>
+    <div>
+    <div>
+      <div className>
+        <div className="text-center bg-blue1 mb-5">
+          <h1 className="bold italic justify-self-center text-4xl font-bold py-3">Tutor Allocation System+</h1>
         </div>
           <div className="grid grid-cols-2">
           <div>
-            <h2 className="space-x-0 text-2xl font-bold">Parameters</h2>
+            <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
             <InputParameters />
           </div>
           <form>
-            <h2 className="text-2xl font-bold">Enter Assessment Dates</h2>
+            <h2 className="text-2xl font-bold mb-1">Enter Assessment Dates</h2>
             <div class="flex justify-start pb-2">
               <label className="w-[35]"> Assignment Name:</label>
-              <input type="text" name="name" class="rounded-md w-60"/>
+              <input type="text" name="name" className="ml-2 rounded-md w-60"/>
             </div>
 
             <div class="flex justify-start pb-1">
@@ -56,9 +54,18 @@
 
           </form>
 
+          <div>
+            <table>
+              <tr>
+              <th>Week</th>
+              <th>Number of Tutors</th>
+              <th>Average Wait Time</th>
+              <th>Max Wait Time</th>
+              </tr>
+            </table>
+          </div>
 
           </div>
-          <h2 className="text-2xl font-bold">Schedule</h2>
           <button v-on:click="simulate" className="flex items-end bg-slate-100 p-5 rounded-md my-5">Crunch the numbers</button>
         </div>
   </div>
@@ -67,8 +74,7 @@
 </template>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-input {
+  input {
   border: 1px solid lightgrey;
 }
 </style>
