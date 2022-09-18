@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       avgTutorHelpTime: 0,
+      delayCost: 0,
       labDuration: 120,
       labsPerWeek: 0,
       questionsPerMinuteNoAssessments: 0,
@@ -60,6 +61,10 @@ export default {
     <div class="flex justify-start pb-1">
       <label class="w-80">Tutor salary (per hour):</label>
       <input type="number" min="0" v-model="tutorSalary" class="rounded-md" />
+    </div>
+    <div class="flex justify-start pb-1">
+      <label class="w-80">Delay Cost (per min):</label>
+      <input type="number" min="0" v-model="delayCost" class="rounded-md" />
     </div>
   </form>
 </template>
