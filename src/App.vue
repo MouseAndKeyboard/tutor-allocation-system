@@ -14,7 +14,7 @@
             <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
             <InputParameters ref="inputs" />
           </div>
-          <AssessmentInput />
+          <AssessmentInput ref="assessmentInput" />
           <ResultsTable ref="results" />
         </div>
         <div>
@@ -51,24 +51,13 @@ export default {
       let delayCost = this.$refs.inputs.delayCost;
       let tutorSalary = this.$refs.inputs.tutorSalary;
       let tutorhelptime = this.$refs.inputs.avgTutorHelpTime;
+      let assessmentWks = this.$refs.assessmentInput.assessmentWks;
+      console.log(assessmentWks);
       this.$refs.results.simulate(
         tutorSalary,
         delayCost,
         labsPerWeek,
-        [
-          false,
-          false,
-          false,
-          false,
-          false,
-          false,
-          true,
-          false,
-          false,
-          false,
-          false,
-          true,
-        ],
+        assessmentWks,
         questionsPerMinuteNoAssessments,
         questionsPerMinuteAssessments,
         tutorhelptime,
