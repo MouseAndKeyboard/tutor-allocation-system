@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-      <div className>
+      <div class="w-screen">
         <div className="text-center bg-blue1 mb-5">
           <h1
             className="bold italic justify-self-center text-4xl font-bold py-3"
@@ -9,7 +9,7 @@
             Tutor Allocation System+
           </h1>
         </div>
-        <div className="grid grid-cols-2 mx-4 space-x-8">
+        <div className="grid grid-cols-2 px-4 gap-x-8 w-full">
           <div>
             <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
             <InputParameters ref="inputs" />
@@ -18,8 +18,8 @@
             <h2 class="space-x-0 text-2xl font-bold mb-1">Assessment Input</h2>
             <AssessmentInput ref="assessmentInput" />
           </div>
-          <ResultsTable ref="results" />
         </div>
+        <ResultsTable ref="results" />
         <div>
           <button
             @click="getResults"

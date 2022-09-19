@@ -1,5 +1,5 @@
 <template>
-  <div class="my-5 w-screen">
+  <div class="my-6 px-4 w-full">
     <h2 class="font-bold mb-4 text-2xl">Results</h2>
     <table className="border-collapse m-auto text-center w-5/6">
       <thead>
