@@ -22,14 +22,11 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr v-for="row in results" class="even:bg-gray">
+        <tr v-for="row in results" class="even:bg-gray">
           <td class="border-y-2 border-slate-400" v-for="val in row">
             {{ val }}
           </td>
-        </tr> -->
-        {{
-          results
-        }}
+        </tr>
       </tbody>
     </table>
   </div>
@@ -37,37 +34,10 @@
 
 <script>
 import optimal_allocations from "../utils/otpimal_allocations";
-// const results = optimal_allocations(
-//   4,
-//   [
-//     false,
-//     false,
-//     false,
-//     false,
-//     false,
-//     false,
-//     true,
-//     false,
-//     false,
-//     false,
-//     false,
-//     true,
-//   ],
-//   0.4,
-//   0.6,
-//   5,
-//   120
-// );
-// for (const row of results) {
-//   row[1] = row[1] ? "T" : "F";
-//   row[4] = row[4].toFixed(0);
-//   row[6] = row[6].toFixed(2);
-//   row.push(parseFloat(row[5]) + parseFloat(row[6]));
-// }
 
 export default {
   data: () => ({
-    results: "live",
+    results: [],
   }),
   methods: {
     optimal_allocations,
@@ -81,7 +51,7 @@ export default {
       tutor_help_rate,
       queuelength
     ) {
-      this.results = optimal_allocations(
+      let results = optimal_allocations(
         tutorSalary,
         delayCost,
         num_labs,
@@ -91,7 +61,13 @@ export default {
         tutor_help_rate,
         queuelength
       );
-      console.log(this.results);
+      for (const row of results) {
+        row[1] = row[1] ? "T" : "F";
+        row[4] = row[4].toFixed(0);
+        row[6] = row[6].toFixed(2);
+        row.push(parseFloat(row[5]) + parseFloat(row[6]));
+      }
+      this.results = results;
     },
   },
 };

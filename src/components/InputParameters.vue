@@ -6,7 +6,7 @@
         id="quesRate1"
         type="number"
         min="0"
-        step=".01"
+        step=".1"
         v-model="questionsPerMinuteNoAssessments"
         class="rounded-md"
       />
@@ -18,7 +18,7 @@
         id="quesRate2"
         type="number"
         min="0"
-        step=".01"
+        step=".1"
         v-model="questionsPerMinuteAssessments"
         class="rounded-md"
       />
@@ -29,7 +29,7 @@
         id="avgTutorHelpTime"
         type="number"
         min="0"
-        step=".01"
+        step="1"
         v-model="avgTutorHelpTime"
         class="rounded-md"
       />
@@ -71,6 +71,7 @@
         id="delayCost"
         type="number"
         min="0"
+        step=".1"
         v-model="delayCost"
         class="rounded-md"
       />
