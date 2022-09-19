@@ -9,12 +9,15 @@
             Tutor Allocation System+
           </h1>
         </div>
-        <div className="grid grid-cols-2 mx-4">
+        <div className="grid grid-cols-2 mx-4 space-x-8">
           <div>
             <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
             <InputParameters ref="inputs" />
           </div>
-          <AssessmentInput ref="assessmentInput" />
+          <div>
+            <h2 class="space-x-0 text-2xl font-bold mb-1">Assessment Input</h2>
+            <AssessmentInput ref="assessmentInput" />
+          </div>
           <ResultsTable ref="results" />
         </div>
         <div>
