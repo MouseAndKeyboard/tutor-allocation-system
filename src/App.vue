@@ -66,7 +66,7 @@ export default {
         tutorhelptime,
         labDuration
       );
-      console.log("hey", tutorhelptime);
+      console.log("hey", questionsPerMinuteNoAssessments);
     },
   },
   components: {

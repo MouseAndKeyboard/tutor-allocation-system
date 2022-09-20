@@ -1,16 +1,11 @@
 <template>
   <form>
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Question rate/no assessments (per min):</label>
-      <input
-        id="quesRate1"
-        type="number"
-        min="0"
-        step=".1"
-        v-model="questionsPerMinuteNoAssessments"
-        class="rounded-md"
-      />
-    </div>
+    <Parameter
+      @on-input="(value) => (questionsPerMinuteNoAssessments = value)"
+      v-model="questionsPerMinuteNoAssessments"
+      title="Question rate/no
+    assessments"
+    />
 
     <div class="flex justify-start pb-1">
       <label class="w-80">Question rate/assessments (per min):</label>
@@ -81,6 +76,7 @@
 
 <script>
 import { reactive } from "vue";
+import Parameter from "./Parameter.vue";
 
 export default {
   data() {
@@ -94,6 +90,7 @@ export default {
       tutorSalary: 50,
     };
   },
+  components: { Parameter },
 };
 </script>
 
