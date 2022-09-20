@@ -20,7 +20,7 @@
       :value="avgTutorHelpTime"
       step="1"
       title="Average tutor help time"
-      unitAfter="mins"
+      unitAfter="mins/question"
     />
     <Parameter
       @on-input="(value) => (labDuration = value)"
