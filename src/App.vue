@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-      <div class="bg-yellow w-screen">
+      <div class="bg-[#FAF9F6] h-screen w-screen">
         <div className="text-center bg-blue1 mb-5">
           <h1
             className="bold italic justify-self-center text-4xl font-bold py-3"
