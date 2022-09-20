@@ -27,6 +27,11 @@
             {{ val }}
           </td>
         </tr>
+        <tr v-if="results.length > 0" class="border-t-2">
+          <td colspan="6"></td>
+          <td class="border-b-2 font-bold">Sem Cost:</td>
+          <td class="border-b-2 font-bold">{{ semCost }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -38,6 +43,7 @@ import optimal_allocations from "../utils/otpimal_allocations";
 export default {
   data: () => ({
     results: [],
+    semCost: 0,
   }),
   methods: {
     optimal_allocations,
@@ -61,12 +67,17 @@ export default {
         tutor_help_rate,
         queuelength
       );
+      this.semCost = 0;
       for (const row of results) {
         row[1] = row[1] ? "T" : "F";
         row[4] = row[4].toFixed(0);
         row[6] = row[6].toFixed(2);
-        row.push((parseFloat(row[5]) + parseFloat(row[6])).toFixed(2));
+        row.push(
+          parseFloat((parseFloat(row[5]) + parseFloat(row[6])).toFixed(2))
+        );
+        this.semCost += parseFloat(row[7]);
       }
+      this.semCost = this.semCost.toFixed(2);
       this.results = results;
     },
   },

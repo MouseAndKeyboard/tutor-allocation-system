@@ -20,10 +20,10 @@
           </div>
         </div>
         <ResultsTable ref="results" />
-        <div>
+        <div class="my-2">
           <button
             @click="getResults"
-            className="bg-blue1 outline-1 w-30 p-2 italics ml-5 rounded-lg"
+            className="bg-blue1 font-bold border-2 outline-1 w-30 p-2 italics ml-5 rounded-lg"
           >
             Generate results
           </button>

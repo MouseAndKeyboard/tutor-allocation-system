@@ -23,7 +23,7 @@ export default {
           <input
             id="vue-checkbox"
             type="checkbox"
-            v-model="assessmentWks[num]"
+            v-model="assessmentWks[num - 1]"
             class="w-4 h-4 text-blue-600"
           />
           <label
@@ -45,7 +45,7 @@ export default {
           <input
             id="vue-checkbox"
             type="checkbox"
-            v-model="assessmentWks[num]"
+            v-model="assessmentWks[num - 1]"
             class="w-4 h-4 text-blue-600"
           />
           <label
