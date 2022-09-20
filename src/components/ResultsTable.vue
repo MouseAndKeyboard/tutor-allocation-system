@@ -1,5 +1,5 @@
 <template>
-  <div class="border-t-2 border-lightgrey my-6 mx-6 w-auto">
+  <div class="border-t-2 border-grey my-6 mx-6 w-auto">
     <h2 class="font-bold my-4 text-2xl">Results</h2>
     <table className="border-collapse m-auto text-center w-11/12">
       <thead>
@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in results" class="w-full">
+        <tr v-for="row in results" class="w-full even:bg-grey-light">
           <td class="border-y-[1px] border-slate-400" v-for="val in row">
             {{ val }}
           </td>

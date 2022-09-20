@@ -10,7 +10,7 @@
           </h1>
         </div>
         <div className="grid grid-cols-2 px-4 gap-x-8 w-full">
-          <div class="border-r-2 border-lightgrey">
+          <div class="border-r-2 border-grey">
             <h2 className="space-x-0 text-2xl font-bold mb-1">Parameters</h2>
             <InputParameters ref="inputs" />
           </div>
@@ -79,6 +79,6 @@ export default {
 
 <style scoped>
 input {
-  border: 1px solid lightgrey;
+  border: 1px solid grey;
 }
 </style>
