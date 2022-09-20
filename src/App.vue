@@ -15,7 +15,7 @@
             <InputParameters ref="inputs" />
           </div>
           <div>
-            <h2 class="space-x-0 text-2xl font-bold mb-1">Assessment Input</h2>
+            <h2 class="space-x-0 text-2xl font-bold mb-1">Assessment Weeks</h2>
             <AssessmentInput ref="assessmentInput" />
           </div>
         </div>
