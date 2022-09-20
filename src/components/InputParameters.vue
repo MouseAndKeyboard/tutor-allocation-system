@@ -36,6 +36,14 @@
       title="Labs per week"
     />
     <Parameter
+      @on-input="(value) => (tutorSalary = value)"
+      :value="tutorSalary"
+      step="1"
+      title="Tutor salary"
+      unitBefore="$"
+      unitAfter="/hr"
+    />
+    <Parameter
       @on-input="(value) => (delayCost = value)"
       :value="delayCost"
       step=".1"
@@ -52,13 +60,13 @@ import Parameter from "./Parameter.vue";
 export default {
   data() {
     return {
-      avgTutorHelpTime: 0,
-      delayCost: 0,
+      questionsPerMinuteNoAssessments: 0.3,
+      questionsPerMinuteAssessments: 0.5,
+      avgTutorHelpTime: 3,
       labDuration: 120,
-      labsPerWeek: 0,
-      questionsPerMinuteNoAssessments: 0,
-      questionsPerMinuteAssessments: 0,
+      labsPerWeek: 4,
       tutorSalary: 50,
+      delayCost: 0.1,
     };
   },
   components: { Parameter },
