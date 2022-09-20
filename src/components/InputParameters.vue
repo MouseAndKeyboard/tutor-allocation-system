@@ -2,81 +2,45 @@
   <form>
     <Parameter
       @on-input="(value) => (questionsPerMinuteNoAssessments = value)"
-      v-model="questionsPerMinuteNoAssessments"
+      :value="questionsPerMinuteNoAssessments"
       step=".1"
       title="Question rate/no
     assessments"
     />
-
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Question rate/assessments (per min):</label>
-      <input
-        id="quesRate2"
-        type="number"
-        min="0"
-        step=".1"
-        v-model="questionsPerMinuteAssessments"
-        class="rounded-md"
-      />
-    </div>
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Average tutor help time (mins):</label>
-      <input
-        id="avgTutorHelpTime"
-        type="number"
-        min="0"
-        step="1"
-        v-model="avgTutorHelpTime"
-        class="rounded-md"
-      />
-    </div>
-
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Lab duration (mins):</label>
-      <input
-        id="labDuration"
-        type="number"
-        min="0"
-        v-model="labDuration"
-        class="rounded-md"
-      />
-    </div>
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Labs per week:</label>
-      <input
-        id="labsPerWeek"
-        type="number"
-        min="0"
-        v-model="labsPerWeek"
-        class="rounded-md"
-      />
-    </div>
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Tutor salary (per hour):</label>
-      <input
-        id="tutorSalary"
-        type="number"
-        min="0"
-        v-model="tutorSalary"
-        class="rounded-md"
-      />
-    </div>
-    <div class="flex justify-start pb-1">
-      <label class="w-80">Delay Cost (per min):</label>
-      <input
-        id="delayCost"
-        type="number"
-        min="0"
-        step=".1"
-        v-model="delayCost"
-        class="rounded-md"
-      />
-    </div>
+    <Parameter
+      @on-input="(value) => (questionsPerMinuteAssessments = value)"
+      :value="questionsPerMinuteAssessments"
+      step=".1"
+      title="Question rate/assessments"
+    />
+    <Parameter
+      @on-input="(value) => (avgTutorHelpTime = value)"
+      :value="avgTutorHelpTime"
+      step="1"
+      title="Average tutor help time"
+    />
+    <Parameter
+      @on-input="(value) => (labDuration = value)"
+      :value="labDuration"
+      step="1"
+      title="Lab duration"
+    />
+    <Parameter
+      @on-input="(value) => (labsPerWeek = value)"
+      :value="labsPerWeek"
+      step="1"
+      title="Labs per week"
+    />
+    <Parameter
+      @on-input="(value) => (delayCost = value)"
+      :value="delayCost"
+      step=".1"
+      title="Delay cost"
+    />
   </form>
 </template>
 
 <script>
-import { reactive } from "vue";
 import Parameter from "./Parameter.vue";
 
 export default {

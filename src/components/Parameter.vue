@@ -1,11 +1,6 @@
 <script>
 export default {
-  data() {
-    return {
-      value: 0,
-    };
-  },
-  props: ["step", "title"],
+  props: ["step", "title", "value"],
   methods: {},
 };
 </script>
