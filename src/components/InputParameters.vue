@@ -4,26 +4,30 @@
       @on-input="(value) => (questionsPerMinuteNoAssessments = value)"
       :value="questionsPerMinuteNoAssessments"
       step=".1"
-      title="Question rate/no
+      title="Question rate w/ no
     assessments"
+      unitAfter="/min"
     />
     <Parameter
       @on-input="(value) => (questionsPerMinuteAssessments = value)"
       :value="questionsPerMinuteAssessments"
       step=".1"
-      title="Question rate/assessments"
+      title="Question rate w/ assessments"
+      unitAfter="/min"
     />
     <Parameter
       @on-input="(value) => (avgTutorHelpTime = value)"
       :value="avgTutorHelpTime"
       step="1"
       title="Average tutor help time"
+      unitAfter="mins"
     />
     <Parameter
       @on-input="(value) => (labDuration = value)"
       :value="labDuration"
       step="1"
       title="Lab duration"
+      unitAfter="mins"
     />
     <Parameter
       @on-input="(value) => (labsPerWeek = value)"
@@ -36,6 +40,8 @@
       :value="delayCost"
       step=".1"
       title="Delay cost"
+      unitBefore="$"
+      unitAfter="/min"
     />
   </form>
 </template>

@@ -1,12 +1,13 @@
 <script>
 export default {
-  props: ["step", "title", "value"],
+  props: ["step", "title", "unitAfter", "unitBefore", "value"],
   methods: {},
 };
 </script>
 <template>
-  <div class="flex justify-start pb-1">
-    <label class="w-80">{{ title }}</label>
+  <div class="flex justify-start pb-1 space-x-2 w-full">
+    <label class="w-5/12">{{ title }}</label>
+    <span class="w-[1%]">{{ unitBefore }}</span>
     <input
       id="quesRate1"
       type="number"
@@ -14,7 +15,8 @@ export default {
       :step="step"
       v-model="value"
       @input="$emit('onInput', value)"
-      class="rounded-md border"
+      class="rounded-md border w-1/4"
     />
+    <span class="w-1/6">{{ unitAfter }}</span>
   </div>
 </template>
