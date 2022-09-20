@@ -15,7 +15,7 @@ export default {
       :step="step"
       v-model="value"
       @input="$emit('onInput', value)"
-      class="rounded-md border w-1/4"
+      class="rounded-md border w-1/4 pl-2"
     />
     <span class="w-1/6">{{ unitAfter }}</span>
   </div>
