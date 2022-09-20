@@ -3,6 +3,7 @@
     <Parameter
       @on-input="(value) => (questionsPerMinuteNoAssessments = value)"
       v-model="questionsPerMinuteNoAssessments"
+      step=".1"
       title="Question rate/no
     assessments"
     />

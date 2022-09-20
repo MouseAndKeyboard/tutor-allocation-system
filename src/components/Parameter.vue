@@ -5,7 +5,7 @@ export default {
       value: 0,
     };
   },
-  props: ["title"],
+  props: ["step", "title"],
   methods: {},
 };
 </script>
@@ -16,7 +16,7 @@ export default {
       id="quesRate1"
       type="number"
       min="0"
-      step=".1"
+      :step="step"
       v-model="value"
       @input="$emit('onInput', value)"
       class="rounded-md border"
