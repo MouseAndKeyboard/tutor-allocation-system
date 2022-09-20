@@ -13,7 +13,7 @@ export default {
 <template>
   <form class="grid grid-cols-2">
     <ul
-      class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg divide-y divide-lightgrey dark:text-white"
+      class="w-48 text-sm font-medium text-gray-900 rounded-lg divide-y divide-lightgrey dark:text-white"
     >
       <li
         v-for="num in Array.from({ length: 6 }, (_, i) => i + 1)"
@@ -35,7 +35,7 @@ export default {
       </li>
     </ul>
     <ul
-      class="w-48 text-sm font-medium text-gray-900 bg-white divide-y divide-lightgrey dark:text-white"
+      class="w-48 text-sm font-medium text-gray-900 divide-y divide-lightgrey dark:text-white"
     >
       <li
         v-for="num in Array.from({ length: 6 }, (_, i) => i + 7)"

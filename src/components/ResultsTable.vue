@@ -1,11 +1,11 @@
 <template>
-  <div class="border-t-2 border-lightgrey my-6 mx-6 px-4 w-auto">
+  <div class="border-t-2 border-lightgrey my-6 mx-6 w-auto">
     <h2 class="font-bold my-4 text-2xl">Results</h2>
     <table className="border-collapse m-auto text-center w-11/12">
       <thead>
-        <tr>
+        <tr class="border-y-2">
           <th
-            class="border-y-2 border-gray-400 font-bold"
+            class="bg-blue1 border-x-[1px] border-white font-bold"
             v-for="header in [
               'Week',
               'Assignment',
@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in results">
+        <tr v-for="row in results" class="w-full">
           <td class="border-y-[1px] border-slate-400" v-for="val in row">
             {{ val }}
           </td>

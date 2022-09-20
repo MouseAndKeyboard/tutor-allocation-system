@@ -23,7 +23,7 @@
         <div>
           <button
             @click="getResults"
-            className="bg-blue1 outline-1 w-30 p-2 italics ml-5"
+            className="bg-blue1 outline-1 w-30 p-2 italics ml-5 rounded-lg"
           >
             Generate results
           </button>
