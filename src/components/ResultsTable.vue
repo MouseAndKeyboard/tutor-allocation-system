@@ -1,20 +1,20 @@
 <template>
   <div class="border-t-2 border-lightgrey my-6 mx-6 px-4 w-auto">
     <h2 class="font-bold my-4 text-2xl">Results</h2>
-    <table className="border-collapse m-auto text-center w-5/6">
+    <table className="border-collapse m-auto text-center w-11/12">
       <thead>
         <tr>
           <th
-            class="border-y-2 border-gray-400"
+            class="border-y-2 border-gray-400 font-bold"
             v-for="header in [
               'Week',
               'Assignment',
               'No. of Tutors',
               'No. of Labs',
-              'Total Wait Time',
-              'Total Wages Cost',
-              'Total Delay Cost',
-              'Total Overall Cost',
+              'Total Wait Time (mins)',
+              'Total Wages Cost ($)',
+              'Total Delay Cost ($)',
+              'Total Overall Cost ($)',
             ]"
           >
             {{ header }}
@@ -22,8 +22,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in results" class="even:bg-gray">
-          <td class="border-y-2 border-slate-400" v-for="val in row">
+        <tr v-for="row in results">
+          <td class="border-y-[1px] border-slate-400" v-for="val in row">
             {{ val }}
           </td>
         </tr>
@@ -65,7 +65,7 @@ export default {
         row[1] = row[1] ? "T" : "F";
         row[4] = row[4].toFixed(0);
         row[6] = row[6].toFixed(2);
-        row.push(parseFloat(row[5]) + parseFloat(row[6]));
+        row.push((parseFloat(row[5]) + parseFloat(row[6])).toFixed(2));
       }
       this.results = results;
     },
