@@ -9,7 +9,7 @@ export default defineConfig({
   "base": "/tutor-allocation-system/",
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./tutor-allocation-system/src/', import.meta.url))
+      '@': fileURLToPath(new URL('/tutor-allocation-system/src/', import.meta.url))
     }
   },
   
