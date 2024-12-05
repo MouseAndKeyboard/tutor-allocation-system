@@ -32,10 +32,12 @@
 
 \
 Showcase of the main classroom planning page:
+
 ![image](https://github.com/user-attachments/assets/1dfd8ff3-936d-4ef7-a71c-7fbfca4af61e)
 
 
 Adjustable parameters:
+
 ![image](https://github.com/user-attachments/assets/3d9adc5c-181e-4d32-887c-02773a612138)
 
 
