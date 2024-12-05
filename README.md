@@ -1,8 +1,5 @@
 # 🚀 Tutor Allocation System
 
-\
-
-
 *Optimise tutor staffing, maximize profits, and reduce student wait times with ease.*
 
 &#x20;&#x20;
